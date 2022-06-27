@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/png" href="./image/planet.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><p>Tracker</p></div>
+
+      <div class="search_parent">
+        <i onclick="renderAllPlanes()" class="fas fa-globe"></i>
+        <div onclick="YourLocation()" class="location_icon"></div>
+        <div class="search">
+          <div class="search_icon"></div>
+          <input
+            id="search_Input"
+            type="text"
+            placeholder="Search..."
+            onkeyup="FilterPlane()"
+          />
+          <div id="results"></div>
+        </div>
+      </div>
+    </nav>
+    <div class="planet_png"></div>
+    <div id="map"></div>
+
+    <script src="apiplans.js"></script>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP78txYW9ds-Q94SlBj6n2lLYBlBeIuM8&callback=initMap"></script>
+  </body>
+</html>

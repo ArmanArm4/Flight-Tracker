@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+nav {
+  background-color: #332d57;
+  height: 56px;
+  padding: 0px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f7c91f;
+}
+nav p {
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+}
+nav input {
+  background-color: initial;
+  border: 1px solid #f7c91f;
+  border-radius: 5px;
+  width: 275px;
+  height: 36px;
+  padding-left: 34px;
+  color: #f7c91f;
+  font-size: 14px;
+}
+nav input:focus {
+  outline: 3px solid #f7c91f;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #f7c91f;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #f7c91f;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #f7c91f;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #f7c91f;
+}
+.search_parent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 20;
+}
+.search_parent input {
+  background-color: #332d57;
+}
+.location_icon {
+  background-image: url("./image//target_icon.png");
+  width: 24px;
+  aspect-ratio: 1/1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.fa-globe {
+  font-size: 22px;
+  cursor: pointer;
+}
+.search {
+  position: relative;
+}
+.search_icon {
+  position: absolute;
+  top: 10px;
+  background-image: url("./image/Icon_Artwork.png");
+  width: 17px;
+  aspect-ratio: 1/1;
+  left: 10px;
+}
+#results {
+  position: absolute;
+  top: 37px;
+  z-index: 10;
+  background-color: #332d57;
+  border: 1px solid #f7c91f;
+  display: none;
+}
+#results div {
+  width: 275px;
+  height: 38px;
+  padding-left: 38px;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+#results div:hover {
+  background-color: rgba(240, 248, 255, 0.2);
+}
+.planet_png {
+  position: absolute;
+  top: -90px;
+  left: 224px;
+  background-image: url("./image/planet.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200.4px;
+  aspect-ratio: 200.4/180;
+  z-index: 20;
+}
+#map {
+  width: 100%;
+  height: calc(100vh - 56px);
+}
+@media (max-width: 892px) {
+  nav {
+    justify-content: center;
+  }
+  .logo {
+    display: none;
+  }
+  .planet_png {
+    top: -100px;
+    left: auto;
+    right: -73px;
+
+    z-index: 1;
+  }
+  .search_parent input {
+    z-index: 4;
+  }
+}
