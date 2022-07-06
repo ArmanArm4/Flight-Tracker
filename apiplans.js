@@ -40,7 +40,6 @@ function foreach_plane(array) {
 let map_container = document.querySelector("#map");
 
 function initMap(MapCenter, planesArray) {
-  console.log(planesArray);
   let options = {
     zoom: 10,
     center: MapCenter,
